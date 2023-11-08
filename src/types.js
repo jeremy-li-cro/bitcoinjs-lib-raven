@@ -13,7 +13,7 @@ exports.BIP32Path = BIP32Path;
 BIP32Path.toJSON = () => {
   return 'BIP32 derivation path';
 };
-const SATOSHI_MAX = 21 * 1e14;
+const SATOSHI_MAX = 21 * 1e14 * 1e3;
 function Satoshi(value) {
   return typeforce.UInt53(value) && value <= SATOSHI_MAX;
 }
